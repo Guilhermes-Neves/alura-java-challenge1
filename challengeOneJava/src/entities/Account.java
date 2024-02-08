@@ -34,13 +34,15 @@ public class Account {
     public void withdraw(Double amount) {
         if (amount > balance) {
             System.out.println("Valor de saque maior que o saldo!");
+        } else if (amount <= 0) {
+            System.out.println("O valor para saque deve ser maior que 0!");
         }
         balance -= amount;
     }
 
     public void deposit(Double amount) {
         if (amount <= 0) {
-            System.out.println("O valor para depósito deve ser maior que 0");
+            System.out.println("O valor para depósito deve ser maior que 0!");
         }
         balance += amount;
     }
